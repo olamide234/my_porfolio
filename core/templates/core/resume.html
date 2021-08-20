@@ -1,0 +1,107 @@
+{% load static %}<!-- using django template language to add the stylesheet created -->
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap4 (Optional unless i'm using cripsy forms) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Fontawesomecdn (Optional)-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- sit-wide stylesheet(optional) -->
+    <link rel="stylesheet" href="{% static 'core\css\stylesheet.css' %}">
+    <!-- title -->
+    <title>My Portfolio</title>
+</head>
+<body>
+    <header>
+        <img src="{% static 'core/images/hng_logo.png' %}" alt="">
+    </header>
+    <!-- django alert message -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class='alert alert-{{message.tags}}'>
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <main>
+        <div class='resume_head'>
+            <h1>OLAMIDE TOFADE</h1>
+            <span>09037596854 </span>||<span> Lagos, Nigeria </span>
+            <div> <a href="https://www.linkedin.com/in/olamide-tofade">https://www.linkedin.com/in/olamide-tofade</a> </div>
+            <div><span> <a href="tofade.olamide2@gmail.com">tofade.olamide2@gmail.com</a></span> || <span><a href="https://github.com/olamide234"> https://github.com/olamide234</a></span></div>
+        </div>
+        <br>
+        <div>
+            <h3>Professional Experience</h3>
+            <span id='bold'>BACKEND ENGINEER</span><span class="tab2"></span><em>(04/2021-07/2021)</em>
+            <div class='margin'>
+                <div class='bottom-margin'><span id='bold'><em>Zuri</em></span>(Remote)</div>
+                <div><span id='bold'><em>Overview</em></span>: Worked on assigned projects using various tools including Html, CSS, Python and Django.</div>
+                <div><span id='bold'><em>Highlights</em></span>:</div>
+            </div>
+            <div>
+                <ul>*<span class="tab_list"></span>Built APIs with endpoints for a hoarding management app alongside other backend developers for unneeded items to be given out or exchanged.</ul>
+                <ul>*<span class="tab_list"></span>Developed a Blog web application using Html, CSS, Python and Django.</ul>
+            </div>
+            
+            
+            <span id='bold'>BACKEND ENGINEER</span><span class="tab2"></span><em>(03/2021-04/2021)</em>
+            <div class='margin'>
+                <div class='bottom-margin'><span id='bold'><em>386Konsult</em></span>(Remote)</div>
+                <div><span id='bold'><em>Overview</em></span>: Collaborated with backend and frontend developers to deploy projects ranging from landing pages to static and dynamic websites using Html, CSS and Python, Django, as major tools.</div>
+                <div><span id='bold'><em>Highlights</em></span>:</div>
+            </div>
+            <div>
+                <ul>*<span class="tab_list"></span>Assisted in revamping the company's website to  improve its data accessibility on the backend for users.</ul>
+            </div>
+            
+
+            <h3>Projects and Notable Milestones</h3>
+            <div>
+                <span id='bold'>CUSTOMER REGISTRY</span><span class="tab"></span> <b><a href='http://customer-basee777.herokuapp.com/api'>http://customer-basee777.herokuapp.com/api</a></b>
+                <ul>*<span class="tab_list"></span>Built a fantastic API with endpoints to accept customer information to the database in order to hone web development skills.</ul></ul>
+            </div>
+            <div>
+                <span id='bold'>HOARDER APP</span>
+                <span><span class="tab3"></span><b><a href='http://hoarder03.herokuapp.com'>http://hoarder03.herokuapp.com</a></b>
+                <ul>*<span class="tab_list"></span>Collaborated with a team of engineers to develop APIs for Hoardr mobile app project using Django.</ul></ul>
+            </div>
+            <div>
+                <span id='bold'>BLOG-EPISODE APP</span><span class="tab4"></span><b><a href='http://episode09.herokuapp.com'>http://episode09.herokuapp.com</a></b>
+                <ul>*<span class="tab_list"></span>Developed APIs for blogging which allow bloggers to upload episodes and readers to comment on blog posts.</ul></ul>
+            </div>
+            <div>
+                <span id='bold'>LEARNING APP</span><span class="tab1"></span><b><a href='http://learning02.herokuapp.com'>http://learning02.herokuapp.com</a></b>
+                <ul>*<span class="tab_list"></span>Developed an web application that allows users to access videos on topics pertaining to programming using HTML, CSS and Django.</ul></ul>
+            </div>
+
+            <h3>Technical Competencies</h3>
+            <div>
+                <span>Python</span><span class="tab_skill"></span><span>HTML5</span><span class="tab_skill2"></span><span>CSS3</span><span class="tab_skill2"></span><span>Bootstrap</span>
+            </div>
+            <div>
+                <span>Django</span><span class="tab_skill"></span><span>Postgres</span><span class="tab_skill"></span><span>Mysql</span><span class="tab_skill"></span><span>Amazon Web Services</span>
+            </div>
+            <br>
+            <h3>Educational Background</h3>
+            <div>
+                <span id='bold'>BACHELOR OF SCIENCE (BSC.) IN MICROBIOLOGY</span><span class="tab"></span><em>(2015 - 2019)</em>
+            </div>
+            <div class='margin'>
+                Obafemi Awolowo University (OAU), Ile-Ife, Osun State, Nigeria. <em>(Second Class Upper)</em>
+            </div>
+        </div>
+        <br><br>
+        <div class='contact'> <a href="{% url 'contact_me' %}"><h4>>>>CONTACT ME>>></h4></a> </div>
+    </main>
+    <footer>
+        <h4 class='centralize'>
+            Inspired by
+            <a href="https://zuri.team">Zuri</a>
+        </h4>
+    </footer>
+</body>
+</html>

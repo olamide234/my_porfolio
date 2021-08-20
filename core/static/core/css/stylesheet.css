@@ -1,0 +1,84 @@
+/* Site-wide style sheet */
+/*Google fonts (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Code+Pro&family=Source+Sans+Pro&display=swap');
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Source Code Pro', monospace;
+light color: silver
+dark color: black
+*/
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin : 0;
+    background-color:rgb(212, 232, 250);
+}
+main{
+    position: relative;
+    z-index: 100;
+    margin: 4rem 25rem 3rem 25rem; /* 4rem 25rem 4rem 25rem; */
+    padding: 3rem 3rem;
+    background:white;
+}
+.resume_head, .contact{
+    text-align: center;
+}
+.margin{
+    margin-left: 40px;
+}
+.bottom-margin{
+    margin-bottom: 10px;
+}
+h1, h3, h4{
+    font-weight: 600;
+}
+#bold{
+    font-weight: 700;
+    position: static;
+}
+/* .separate{
+    position:unset;
+    text-align: right;
+} */
+.tab{
+    display: inline-block;
+    margin-left: 325px;
+}
+.tab2{
+    display: inline-block;
+    margin-left: 480px;
+}
+.tab1{
+    display: inline-block;
+    margin-left: 365px;
+}
+.tab3{
+    display: inline-block;
+    margin-left: 370px;
+}
+.tab4{
+    display: inline-block;
+    margin-left: 333px;
+}
+.tab_list{
+    display: inline-block;
+    margin-left: 20px;
+}
+.tab_skill{
+    display: inline-block;
+    margin-left: 160px;
+}
+.tab_skill2{
+    display: inline-block;
+    margin-left: 170px;
+}
+input[type='submit' i] {
+    margin: 0;
+}
+.asteriskField {
+    display:none;
+}
+.centralize{
+    text-align: center;
+}

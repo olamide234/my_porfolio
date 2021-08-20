@@ -1,0 +1,31 @@
+{% load static %}<!-- using django template language to add the stylesheet created -->
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap4 (Optional unless i'm using cripsy forms) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Fontawesomecdn (Optional)-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- sit-wide stylesheet(optional) -->
+    <link rel="stylesheet" href="{% static 'core\css\stylesheet.css' %}">
+    <!-- title -->
+    <title>My Portfolio</title>
+</head>
+<body>
+    <main>
+        <div class='resume_head'>
+            <h1>CONTACT</h1>
+            You've read my resume and will like to contact me? If yes, fill this form
+        </div>
+        <form method='post'>
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type='submit' value='send'>
+        </form>
+    </main>
+</body>
+</html>
