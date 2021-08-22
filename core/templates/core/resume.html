@@ -15,9 +15,6 @@
     <title>My Portfolio</title>
 </head>
 <body>
-    <header>
-        <img src="{% static 'core/images/hng_logo1.png' %}" alt="">
-    </header>
     <!-- django alert message -->
     {% if messages %}
         {% for message in messages %}
@@ -79,11 +76,13 @@
             </div>
 
             <h3>Technical Competencies</h3>
-            <div>
-                <span>Python</span><span class="tab_skill"></span><span>HTML5</span><span class="tab_skill2"></span><span>CSS3</span><span class="tab_skill2"></span><span>Bootstrap</span>
-            </div>
-            <div>
-                <span>Django</span><span class="tab_skill"></span><span>Postgres</span><span class="tab_skill"></span><span>Mysql</span><span class="tab_skill"></span><span>Amazon Web Services</span>
+            <div class='boxing'>
+                <div>
+                    <span class='spacing-1'>Python</span><span class='spacing-2'>HTML5</span><span class='spacing-3'>CSS3</span><span class='spacing-4'>Bootstrap</span>
+                </div>
+                <div>
+                    <span class='spacing-1'>Django</span><span class='spacing-2'>Postgres</span><span class='spacing-3'>Mysql</span><span class='spacing-4'>Amazon Web Services</span>
+                </div>
             </div>
             <br>
             <h3>Educational Background</h3>
@@ -98,10 +97,16 @@
         <div class='contact'> <a href="{% url 'contact_me' %}"><h4>>>>CONTACT ME>>></h4></a> </div>
     </main>
     <footer>
-        <h4 class='centralize'>
-            Inspired by
-            <a href="https://zuri.team">Zuri</a>
-        </h4>
+        <div class='centre'>
+            Courtesy:
+        </div>
+        <div class='centre'>
+            <img src="{% static 'core/images/hng_logo1.png' %}" alt="">
+        </div>
+        <div class='centralize'>
+            Visit Zuri
+            <a href="https://zuri.team">here</a>
+        </div>
     </footer>
 </body>
 </html>
